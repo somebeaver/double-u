@@ -1,3 +1,6 @@
+// TODO remove this dep
+import html from '../../html.js'
+
 /**
  * Returns a new __Object for chaining.
  *
@@ -1398,19 +1401,19 @@ export class __Object {
    * @param {boolean} [bypassCache] - Set to true to skip the cache and perform
    * the file lookup. Defaults to false.
    */
-  // getHtmlFromFile(path, replacements = {}, bypassCache = false) {
-  //   return new Promise(async (resolve, reject) => {
-  //     try {
-  //       let fileContents = await this.getFileContents(path, bypassCache)
-  //       let parsed = await html(fileContents, replacements)
+  getHtmlFromFile(path, replacements = {}, bypassCache = false) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        let fileContents = await this.getFileContents(path, bypassCache)
+        let parsed = await html(fileContents, replacements)
         
-  //       resolve(parsed)
-  //     } catch (err) {
-  //       console.warn(err)
-  //       reject()
-  //     }
-  //   })
-  // }
+        resolve(parsed)
+      } catch (err) {
+        console.warn(err)
+        reject()
+      }
+    })
+  }
 
   /**
    * Returns the contents of a .json file. Only works in Electron. This function
