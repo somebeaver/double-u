@@ -1,5 +1,5 @@
 // TODO remove this dep
-import html from '../../html.js'
+import html from '../html.js/index.js'
 
 /**
  * Returns a new __Object for chaining.
@@ -1400,9 +1400,13 @@ export class __Object {
    * template.
    * @param {boolean} [bypassCache] - Set to true to skip the cache and perform
    * the file lookup. Defaults to false.
+   * 
+   * TODO remove
    */
   getHtmlFromFile(path, replacements = {}, bypassCache = false) {
     return new Promise(async (resolve, reject) => {
+      console.warn('Deprecated function. Switch to html.js.')
+
       try {
         let fileContents = await this.getFileContents(path, bypassCache)
         let parsed = await html(fileContents, replacements)
@@ -1424,9 +1428,13 @@ export class __Object {
    * rather than parsing it.
    * @param {boolean} [flattened=false] - If asString is true, this can be used
    * to trim whitespace from the JSON string.
+   * 
+   * TODO remove
    */
   getJSONFromFile(path, asString = false, flattened = false, bypassCache = false) {
     return new Promise(async (resolve, reject) => {
+      console.warn('Deprecated function. Switch to html.js.')
+
       try {
         let fileContents = await this.getFileContents(path, bypassCache)
         
