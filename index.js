@@ -1,6 +1,3 @@
-// TODO remove this dep
-import html from '../html.js/index.js'
-
 /**
  * Returns a new __Object for chaining.
  *
@@ -1406,6 +1403,7 @@ export class __Object {
   getHtmlFromFile(path, replacements = {}, bypassCache = false) {
     return new Promise(async (resolve, reject) => {
       console.warn('Deprecated function. Switch to html.js.')
+      return 'DEPRACATED'
 
       try {
         let fileContents = await this.getFileContents(path, bypassCache)
@@ -1434,6 +1432,7 @@ export class __Object {
   getJSONFromFile(path, asString = false, flattened = false, bypassCache = false) {
     return new Promise(async (resolve, reject) => {
       console.warn('Deprecated function. Switch to html.js.')
+      return 'DEPRACATED'
 
       try {
         let fileContents = await this.getFileContents(path, bypassCache)
