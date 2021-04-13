@@ -662,59 +662,6 @@ export class __Object {
   }
 
   /**
-   * Returns all values from a form, empty or not. This method expects exactly
-   * one form Element in the set of matched Elements.
-   *
-   * This will also add the following properties to the return object for
-   * convienence:
-   *
-   * - If the fields `date-dd`, `date-mm`, `date-yyyy` all exist in the form and
-   *   are not empty, their values will be used to add these new properties:
-   *   `date-ms` and `date-dd-mm-yyyy`.
-   *
-   * @returns {object} Returns an object where keys are the field names and the
-   * values are the field values.
-   */
-  getFormValues() {
-    if (this.els.length !== 1) throw new Error('__().getFormValues() expects exacly 1 item in the set of matches elements')
-    if (!(this.els[0] instanceof Element) && !this.els[0].matches('form')) throw new Error('__().getFormValues() expects exactly 1 form Element')
-
-    let values = {}
-
-    // pull each field value out
-    this.find('input, select, textarea').each((el) => {
-      values[__(el).attr('name')] = __(el).value()
-    })
-    
-    // if the date dd-mm-yyyy fields exist
-    if (this.find('input[name="date-dd"]').els.length && this.find('input[name="date-mm"]').els.length && this.find('input[name="date-yyyy"]').els.length) {
-      let day = this.find('input[name="date-dd"]').value()
-      let month = this.find('input[name="date-mm"]').value()
-      let year = this.find('input[name="date-yyyy"]').value()
-
-      if (day && month && year) {
-        values['date-ms'] = Date.parse(`${year}-${month}-${day}`)
-        values['date-dd-mm-yyyy'] = `${day}-${month}-${year}`
-      }
-    }
-
-    // convert File objects to simpler objects
-    for(let [name, value] of Object.entries(values)) {
-      if (value instanceof FileList) {
-        for (let i = 0; i < value.length; i++ ) {
-          let file = value.item(i)
-          
-          // set the original value to the path string
-          values[name] = file.path
-          //values[`${name}-original`] = file
-        }
-      }
-    }
-
-    return values
-  }
-
-  /**
    * If a string is given, then that CSS property will be returned.
    *
    * If an object is given, key:value will be mapped to CSS property:value.
