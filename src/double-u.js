@@ -1,22 +1,22 @@
 /**
  * @module double-u
+ * @typicalname __
  */
 
 /**
  * Returns a new __Object for chaining.
  *
- * @param {Object|array}} selector - CSS3 selector, Element, DocumentFragment,
- * NodeList, or an array of Elements.
+ * @param {*} selector
  * @returns {__Object}
  */
-export default function __(selector) {
-  return new __Object(selector)
-}
-
-/**
- * The __Object class
- */
 export class __Object {
+  /**
+   * Constructor.
+   *
+   * @param {*} selector - CSS3 selector, Element, DocumentFragment, NodeList,
+   * or an array of Elements.
+   * @returns {__Object}
+   */
   constructor(selector) {
     // allow an empty __Object so that some helpers can still be used, eg.
     // .isJSON(), .watch(). etc
