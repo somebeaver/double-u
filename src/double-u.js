@@ -1,4 +1,8 @@
 /**
+ * @module double-u
+ */
+
+/**
  * Returns a new __Object for chaining.
  *
  * @param {Object|array}} selector - CSS3 selector, Element, DocumentFragment,
@@ -444,7 +448,7 @@ export class __Object {
    * set.
    *
    * @param {string} name - The attribute name to get, create, or edit.
-   * @param {Number)} [value] - The value to set the attribute to. Chainable
+   * @param {Number} [value] - The value to set the attribute to. Chainable
    * when a value is given.
    * @returns {mixed} The attribute value, undefined if the attribute didn't
    * exist, and null if exists but is empty.
@@ -669,7 +673,7 @@ export class __Object {
    *
    * **Overwrites the style attribute on every use.**
    *
-   * @param {(object|string}} css
+   * @param {(object|string)} css
    * @returns {mixed} An array or a string when doing a lookup, or an __Object
    * when setting.
    */
@@ -1121,7 +1125,7 @@ export class __Object {
    * Inserts a template literal, a document fragment, or a live Element node as
    * either the first or last children of an element.
    *
-   * @param {Element)} tempate - HTML string to nodes to insert.
+   * @param {Element} tempate - HTML string to nodes to insert.
    * @param {string} [position=prepend] - Prepend, append, before, or after.
    * @returns {mixed} - If the template was a string and position=append, then a
    * new __Object with the first child nodes of all the elements in the set.
@@ -1521,7 +1525,7 @@ export class __Object {
    * Returns the x,y coordinates for an element on the page relative to the
    * window. Not chainable.
    *
-   * @returns {(array|object}} - Either a pair of coordinates, or an array of
+   * @returns {(array|object)} - Either a pair of coordinates, or an array of
    * pairs, depending if multiple elements were given.
    */
   position() {

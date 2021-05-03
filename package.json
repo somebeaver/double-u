@@ -2,5 +2,11 @@
   "name": "double-u",
   "version": "1.0.0",
   "author": "somebeaver",
-  "private": true
+  "private": true,
+  "scripts": {
+    "docs": "jsdoc2md ./src/double-u.js > api.md"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.0"
+  }
 }

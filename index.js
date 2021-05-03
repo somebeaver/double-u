@@ -1,2 +1,2 @@
-import __ from './src/__.js'
+import __ from './src/double-u.js'
 export default __
