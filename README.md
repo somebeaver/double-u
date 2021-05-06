@@ -53,8 +53,9 @@ let thumbs = document.querySelectorAll('.thumb')
 __(thumbs).addClass('show')
 
 // using a DocumentFragment
-let template = __('#app').getTemplate('.lock-screen')
-__(template).find('.error-message').show()
+let template = __('#app').getTemplate('.menu-item')
+__(template).find('a').attr('href', '/home')
+__('.menu').after(template)
 
 // can also be initialized with nothing
 let shuffled = __().shuffle(['dog', 'cat'])
