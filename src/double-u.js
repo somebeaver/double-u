@@ -4,6 +4,15 @@
  */
 
 /**
+ * Factory function.
+ * 
+ * @param {*} selector - Selector for `__Object` constructor.
+ */
+export function __(selector) {
+  return new __Object(selector)
+}
+
+/**
  * Returns a new __Object for chaining.
  *
  * @param {*} selector
