@@ -1684,7 +1684,7 @@ export class __Object {
    * TODO remove this when Electron is fixed.
    */
   __doubleSlashesOnWindowsOnly(str) {
-    if (Bridge.os === 'win32') {
+    if (__('#app').attr('os') === 'win32') {
       return str.replace(/\\/g, '\\\\')
     }
 
