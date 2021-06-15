@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>router.js Tests</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #output {
+        padding: 10px;
+        max-height: 70vh;
+        overflow-y: scroll;
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="output"></div> 
+
+    <div id="permanent-elements">
+      <div id="perm1" class="odd"></div>
+      <div id="perm2" class="even"></div>
+      <div id="perm3" class="odd"></div>
+      <div id="perm4" class="even"></div>
+      <div id="perm5" class="odd"></div>
+      <div id="perm6" class="even"></div>
+    </div>
+
+    <script src="test/server/suite.js" type="module"></script>
+  </body>
+</html>

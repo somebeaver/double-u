@@ -1,12 +1,14 @@
 {
   "name": "double-u",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "somebeaver",
   "private": true,
   "scripts": {
+    "test": "./test/server/server.js",
     "docs": "jsdoc2md ./src/double-u.js > DOCS.md"
   },
   "devDependencies": {
+    "express": "^4.17.1",
     "jsdoc-to-markdown": "^6.0.0"
   }
 }

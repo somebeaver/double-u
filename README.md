@@ -69,6 +69,19 @@ All methods are chainable unless otherwise specified.
 __('.foo').find('.bar').addClass('loading').attr('data-message', msg).each((el) => {})
 ```
 
+## Testing
+
+You need `npm` and Node.js to run double-u tests.
+
+To start an Express server that delivers the test suite to a browser, run:
+
+```
+$ npm run ./test/test-env.js
+```
+
+Then navigate to `http://localhost:3000` in any browser. The tests will
+automatically run and the results will be shown on the page.
+
 ## License
 
 Licensed under the Mozilla Public License 2.0.
