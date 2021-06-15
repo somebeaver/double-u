@@ -76,7 +76,7 @@ You need `npm` and Node.js to run double-u tests.
 To start an Express server that delivers the test suite to a browser, run:
 
 ```
-$ npm run ./test/test-env.js
+$ npm run test
 ```
 
 Then navigate to `http://localhost:3000` in any browser. The tests will
